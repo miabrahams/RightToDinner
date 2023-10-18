@@ -1,3 +1,4 @@
 Thanks for reading me! 😘
 
-hii!
+Ideas for what to do once we locate the recipe: 
+* Once the recipe is located, delete everything in the DOM up until the body tag.
