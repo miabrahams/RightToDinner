@@ -10,14 +10,6 @@
   "background": {
     "service_worker": "background.js"
   },
-  // "content_scripts": [
-  //   {
-  //     "js": ["content.js"],
-  //     "matches": [
-  //       "https://*/*"
-  //     ]
-  //   }
-  // ],
   "permissions": ["activeTab", "scripting"],
   "commands": {
     "_execute_action": {
