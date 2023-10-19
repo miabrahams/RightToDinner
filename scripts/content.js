@@ -45,7 +45,8 @@ if (method === 0) {
   // htmlElement.appendChild(recipe)
   //remove the old body
   // oldBody.remove()
-  htmlElement.appendChild(recipe)
+  htmlElement.appendChild(recipe[0])
+  oldBody.remove()
 }
 else if (method === 1) {
 
