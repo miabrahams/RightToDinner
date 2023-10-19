@@ -4,20 +4,12 @@
   "description": "Denoise recipe websites",
   "version": "1.0",
   "action": {
-    "default_popup": "index.html",
-    "default_icon": "assets/righttodinner.png"
+    "default_icon": "assets/righttodinner.png",
+    "default_title": "Click to clean"
   },
   "background": {
     "service_worker": "background.js"
   },
-  "content_scripts": [
-    {
-      "js": ["scripts/content.js"],
-      "matches": [
-        "https://*/*"
-      ]
-    }
-  ],
   "permissions": ["activeTab", "scripting"],
   "commands": {
     "_execute_action": {
