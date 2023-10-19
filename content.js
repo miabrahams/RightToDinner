@@ -28,12 +28,12 @@
 
 //SECOND ATTEMPT TO THE PROBLEM ABOVE
 //find the recipe and see if that element has siblings
-let recipe = [document.querySelector('[id^="wprm-recipe-container"]') || document.querySelector('[class*="recipe-card"]')];
 //if so, delete them
 
 const method = 0;
 
 if (method === 0) {
+  let recipe = document.querySelector('[id^="wprm-recipe-container"]') || document.querySelector('[class*="recipe-card"]');
 
   const oldBody = document.querySelector("body")
   //initialize a variable to hold the HTML element (top node)
@@ -41,23 +41,23 @@ if (method === 0) {
   //create a new body
   const newBody = document.createElement("body");
   //append the recipe variable to be a child of the HTML element
-  recipe.forEach(r => htmlElement.appendChild(r))
+  htmlElement.appendChild(recipe)
   // htmlElement.appendChild(recipe)
   //remove the old body
-  // oldBody.remove()
-  htmlElement.appendChild(recipe[0])
+  // oldBody.style.visibility = "hidden"
   oldBody.remove()
+
 }
 else if (method === 1) {
 
-  let keep = recipe[0];
+  let recipe = document.querySelector('[id^="wprm-recipe-container"]') || document.querySelector('[class*="recipe-card"]');
+  let keep = recipe;
   do {
     let parent = keep.parentElement;
     parent.replaceChildren(keep);
     keep = parent;
   }
   while (keep.tagName !== 'HTML');
-
 }
 
 
@@ -76,9 +76,6 @@ Ads.forEach(AdList => AdList.forEach(el => el.remove()))
 
 //created a JSON string of the style of the div we were trying to collect from the FOS
 //grab the style
-
-
-
 
 // const Ads = [];
 
